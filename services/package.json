@@ -1,0 +1,31 @@
+{
+  "name": "manga-reader-services",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "babel-node src/index.js",
+    "watch": "babel-watch src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "babel-watch": "^7.0.0"
+  },
+  "dependencies": {
+    "@babel/node": "^7.8.7",
+    "apollo-server": "^2.12.0",
+    "apollo-server-express": "^2.12.0",
+    "babel-plugin-root-import": "^6.5.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "graphql": "^15.0.0",
+    "graphql-tag": "^2.10.3",
+    "mongoose": "^5.9.14",
+    "prettier": "^2.0.4",
+    "prettierrc": "0.0.0-5"
+  }
+}
