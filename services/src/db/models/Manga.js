@@ -4,6 +4,7 @@ export const schema = new mongoose.Schema({
     alias: String,
     categories: [String],
     hits: Number,
+    lastUpdated: Number,
     image: String,
     status: Number,
     title: String

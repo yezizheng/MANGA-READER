@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "docker:start": "docker start manga-reader-mongo",
+    "start:cron": "babel-node src/cron.js",
     "start:dev": "babel-node src/index.js",
     "watch": "babel-watch src/index.js"
   },
@@ -18,6 +20,7 @@
     "@babel/node": "^7.8.7",
     "apollo-server": "^2.12.0",
     "apollo-server-express": "^2.12.0",
+    "axios": "^0.19.2",
     "babel-plugin-root-import": "^6.5.0",
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
@@ -25,7 +28,6 @@
     "graphql": "^15.0.0",
     "graphql-tag": "^2.10.3",
     "mongoose": "^5.9.14",
-    "prettier": "^2.0.4",
-    "prettierrc": "0.0.0-5"
+    "node-cron": "^2.0.3"
   }
 }
