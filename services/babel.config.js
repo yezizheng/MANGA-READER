@@ -1,4 +1,14 @@
 module.exports = {
     presets: ["@babel/env"],
-    plugins: ['babel-plugin-root-import']
-}
+    plugins: [
+        [
+            "module-resolver",
+            {
+                alias: {
+                    "#root": "./src"
+                }
+            }
+        ],
+        "@babel/plugin-transform-runtime"
+    ]
+};

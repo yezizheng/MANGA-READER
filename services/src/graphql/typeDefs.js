@@ -1,14 +1,19 @@
+import { gql } from 'apollo-server';
 
+const typeDefs = gql`
+  scalar Date
 
-const typeDefs = [`
-  schema {
-    query: RootQuery
+  type Manga {
+    id: ID!
+    image: String
+    lastUpdated: Date!
+    title: String!
   }
 
-  type RootQuery {
-    aNumber: Int
+  type Query {
+    mangas: [Manga!]!
   }
-`];
+`;
 
 
-module.exports = typeDefs;
+export default typeDefs;
