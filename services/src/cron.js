@@ -5,6 +5,10 @@ import cron from "node-cron";
 import "./db/connection";
 import Manga from "./db/models/Manga";
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 16280e375596f666c98c700f9faff6a893a208bb
 const axiosME = axios.create({
     baseURL: process.env.MANGA_EDEN_URL,
 });
@@ -14,6 +18,7 @@ const transformMangaEden = manga =>
         .filter(manga => manga.ld)
         .map(
             ({
+<<<<<<< HEAD
                 a: alias,
                 c: categories,
                 h: hits,
@@ -24,6 +29,18 @@ const transformMangaEden = manga =>
                 t: title
             }) => ({
                 alias,
+=======
+                a: alias, 
+                c: categories, 
+                h: hits, 
+                i: _id, 
+                im: image, 
+                ld: lastUpdated,
+                s: status, 
+                t: title                                                                                                                               
+            }) => ({
+                alias, 
+>>>>>>> 16280e375596f666c98c700f9faff6a893a208bb
                 categories,
                 hits,
                 _id,
@@ -35,7 +52,11 @@ const transformMangaEden = manga =>
         );
 
 const seed = async () => {
+<<<<<<< HEAD
     const res = await axiosME.get();
+=======
+    const res =  await axiosME.get();
+>>>>>>> 16280e375596f666c98c700f9faff6a893a208bb
     const mangas = transformMangaEden(res.data.manga);
 
     await Manga.insertMany(mangas);
